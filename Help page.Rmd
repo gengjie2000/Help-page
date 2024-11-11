@@ -5,6 +5,228 @@ date: "2024-11-10"
 output: openintro::lab_report
 ---
 
+# R MarkDown常用语法介绍
+
+## Markdown 标题语法
+
+创建标题，在标题前添加井号 (#) 。# 的数量代表了标题的级别，注意#后需要添加一个空格生效。
+
+示例：
+
+```
+# 一级标题
+## 二级标题
+### 三级标题
+......
+###### 六级标题
+```
+
+![标题语法](https://files.mdnice.com/user/71304/29563a1d-8ef0-4118-8185-481a05754315.png)
+
+## Markdown 段落语法
+
+要创建段落，请使用空白行将一行或多行文本进行分隔。
+
+示例：
+
+```
+R Markdown是一种用于数据科学写作的框架，它的核心思想是创作包含文本和代码的动态文档。
+
+R Markdown可以用于撰写数据分析报告、记录学习过程、发表电子书和长篇文档。
+```
+
+## Markdown 换行语法
+
+在一行的末尾添加两个或多个空格，然后按回车键，即可创建一个换行。
+
+示例：
+
+```
+R Markdown是一种用于数据科学写作的框架，  
+它的核心思想是创作包含文本和代码的动态文档。
+```
+
+## Markdown 强调语法
+
+- **字体加粗**
+
+要加粗文本，需要再内容前两个星号（ ** ）或下划线（ __ ）。如需加粗一段文字的中间部分，则需要在加粗部分的两侧各添加两个星号（ ** ）。
+
+- *斜体*
+
+要用斜体显示文本，请在文本前后添加一个星号（ * ）或下划线（ _ ）。要斜体突出文本的中间部分，请在文字前后各添加一个星号，中间不要带空格。
+
+- ***粗体和斜体***
+
+要同时用粗体和斜体突出显示文本，请在文段的前后各添加三个星号（ *** ）或下划线（ ___ ）。要加粗并用斜体显示文本的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。
+
+示例：
+
+```
+**字体加粗**
+
+*斜体*
+
+***粗体和斜体***
+```
+
+## Markdown 列表语法
+
+- 有序列表
+
+创建一个有序列表，需要在每一条内容前增加一个数字和英文句号. 列表的起始数据必须是1：
+
+示例：
+
+```
+1. 生物信息学
+2. biomamba
+3. 生信基地
+4. MarkDown
+5. Shiny
+或者：
+1. 生物信息学
+1. biomamba
+1. 生信基地
+1. MarkDown
+1. Shiny
+```
+
+1. 生物信息学
+2. biomamba
+3. 生信基地
+4. MarkDown
+5. Shiny
+
+或者：
+
+1. 生物信息学
+1. biomamba
+1. 生信基地
+1. MarkDown
+1. Shiny
+
+- 无序列表
+
+创建一个无序列表，需要在每一条内容前增加破折号（-）、星号（ * ）或加号（+）。缩进一个或多个列表项可创建嵌套列表。
+
+示例：
+
+```
+- 生物信息学
+- biomamba
+- 生信基地
+或者：
+* 生物信息学
+* biomamba
+* 生信基地
+或者：
++ 生物信息学
++ biomamba
++ 生信基地
+
+- 生物信息学
+ - biomamba
+  - 生信基地
+```
+
+- 生物信息学
+- biomamba
+- 生信基地
+
+或者：
+
+* 生物信息学
+* biomamba
+* 生信基地
+
+或者：
+
++ 生物信息学
++ biomamba
++ 生信基地
+
+- 生物信息学
+  - biomamba
+    - 生信基地
+    
+## Markdown 代码语法
+
+通常代码模块，可以使用一个或多个反引号：
+
+示例：
+
+![](https://files.mdnice.com/user/71304/980bb82b-a409-47a9-80ee-b9c0756881dc.png)
+
+```
+library(shiny)
+library(DT)
+library(shinyjs)
+library(shinycssloaders)
+library(shinyWidgets)
+library(shinydashboard)
+library(markdown)
+```
+
+## Markdown 分隔线
+
+要创建分隔线，在单独一行上使用三个或多个星号（ *** ）、破折号（ --- ）或下划线（ ___ ），并且不能包含其他内容。
+
+```
+***
+---
+___
+```
+
+***
+
+---
+
+___
+
+## Markdown 链接语法
+
+- 超链接Markdown语法代码：[超链接显示名](超链接地址)
+
+示例：
+
+```
+这是一个链接 [Biomanba生信基地](https://space.bilibili.com/484326544/)
+```
+
+这是一个链接 [Biomanba生信基地](https://space.bilibili.com/484326544/)
+
+- 网址和Email地址
+
+使用尖括号可以很方便地把URL或者email地址变成可点击的链接。
+
+```
+<https://space.bilibili.com/484326544/>
+```
+
+<https://space.bilibili.com/484326544/>
+
+## Markdown 图片语法
+
+要添加图像，请使用感叹号（!）, 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。
+
+示例：
+
+```
+![Biomamba 生信基地](https://files.mdnice.com/user/71304/9a799584-11f8-4d76-a64a-86bf4f4ac117.jpg)
+```
+
+给图片增加链接，请将图像的Markdown括在方括号中，然后将链接添加在圆括号中。
+
+```
+[![Biomamba 生信基地](https://files.mdnice.com/user/71304/9a799584-11f8-4d76-a64a-86bf4f4ac117.jpg)](https://space.bilibili.com/484326544/)
+```
+
+渲染效果如下：
+
+[![Biomamba 生信基地](https://files.mdnice.com/user/71304/9a799584-11f8-4d76-a64a-86bf4f4ac117.jpg)](https://space.bilibili.com/484326544/)
+
+
 # Landing page (GEO datasets)
 
 To illustrate the usability and efficacy of GREIN, we will walk through the available features for exploring and analyzing data sets with an example. The interpretation of the results need further bioinformatics expertise. GREIN is a platform independent web application. All you need is to open a web browser and type this url: https://shiny.ilincs.org/grein in the address bar which will load the following landing page with three sections as shown below:
